@@ -1,0 +1,25 @@
+print("I am using Python3 currently")
+weather = dict()
+weather = {'Jan': '41', 'Feb': '41', 'Mar': '45', 'Apr': '46', 'May': '52', 'Jun': '57', 'Jul': '61', 'Aug': '61', 'Sep'
+    : '57', 'Oct': '52', 'Nov': '46', 'Dec': '45'}
+
+
+def reverse_lookup(d, v):
+    for k in d:
+        if d[k] == v:
+            return k
+    raise ValueError
+
+
+averageTemp = 0
+
+
+def average_temp(s):
+    global averageTemp
+    for i in s:
+        i = s[i]
+        if averageTemp < int(i):
+            averageTemp = int(i)
+    print(averageTemp)
+
+average_temp(weather)
