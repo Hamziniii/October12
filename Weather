@@ -4,17 +4,22 @@ weather = {'Jan': '41', 'Feb': '41', 'Mar': '45', 'Apr': '46', 'May': '52', 'Jun
     : '57', 'Oct': '52', 'Nov': '46', 'Dec': '45'}
 
 
-def reverse_lookup(d, v):
-    for k in d:
-        if d[k] == v:
-            return k
-    raise ValueError
+def average_temp(s):
+    average = 0
+    times = 0
+    for i in s:
+        i = s[i]
+        average += int(i)
+        times += 1
+    average = average/times
+    average = int(average)
+    print("The average temperature of the set is: " + str(average))
 
 
 averageTemp = 0
 
 
-def average_temp(s):
+def warmest_temp(s):
     global averageTemp
     for i in s:
         i = s[i]
@@ -23,3 +28,4 @@ def average_temp(s):
     print(averageTemp)
 
 average_temp(weather)
+warmest_temp(weather)
